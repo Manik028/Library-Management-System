@@ -1,2 +1,2 @@
 # Library-Management-System
-A peoject build with JavaFX
+A project build with JavaFX
