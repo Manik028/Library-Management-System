@@ -4,7 +4,8 @@
 
 A modern, feature-rich desktop Library Management System built using **JavaFX** and **Maven**, powered by a lightweight **SQLite database**.
 
-This application provides a secure and interactive platform for both librarians and users with a clean UI.
+This application provides a secure and interactive platform for both librarians and users with a clean UI. You can login to your User account after signing up
+Then a clean Library Card is generated for you. You can also download that card. Again you can Communicate with admin through Admin support. After logging in as Admin, an admin can issue books, return books, create questions and also support Users with a proper furnished way.
 
 ---
 
@@ -61,15 +62,25 @@ Built as a desktop application using JavaFX with SQLite for data storage.
 ### 1. Clone the Repository
 ```bash ```
 git clone https://github.com/Manik028/Library-Management-System.git
+
+
 cd Library-Management-System
+
+
+
 2. Open in IDE
 Open project in IntelliJ IDEA or Eclipse
 Let Maven download dependencies
-3. Configure JavaFX
+
+
+
+4. Configure JavaFX
 
 Add VM options if needed:
-
 --module-path /path/to/javafx/lib --add-modules javafx.controls,javafx.fxml
+
+
+
 4. Run the Project
 
 Run:
@@ -87,8 +98,7 @@ Library-Management-System/
 │   │   ├── java/          # Java source code
 │   │   └── resources/     # FXML, CSS, images
 │
-├── database/              # SQLite database file
-├── images/                # Screenshots
+├── database/              # SQLite database file  
 ├── pom.xml
 ├── mvnw
 └── README.md
