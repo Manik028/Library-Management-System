@@ -63,8 +63,8 @@ Built as a desktop application using JavaFX with SQLite for data storage.
 ```bash ```
 git clone https://github.com/Manik028/Library-Management-System.git
 
-
-cd Library-Management-System
+```cd```
+Library-Management-System
 
 
 
@@ -85,12 +85,11 @@ Add VM options if needed:
 
 Run:
 mvn javafx:run
-
 OR run:
 Launcher.java
 
 
-📂 Project Structure
+### 📂 Project Structure
 Library-Management-System/
 │
 
@@ -114,10 +113,12 @@ Library-Management-System/
 
 
 
-⭐ Support
+### ⭐ Support
+
 If you like this project:
 
-⭐ Star the repository
+### ⭐ Star the repository
+
 🚀 Share with others
 💬 Give feedback
 
