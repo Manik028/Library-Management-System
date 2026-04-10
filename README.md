@@ -68,20 +68,20 @@ cd Library-Management-System
 
 
 
-2. Open in IDE
+### 2. Open in IDE
 Open project in IntelliJ IDEA or Eclipse
 Let Maven download dependencies
 
 
 
-4. Configure JavaFX
+### 3. Configure JavaFX
 
 Add VM options if needed:
 --module-path /path/to/javafx/lib --add-modules javafx.controls,javafx.fxml
 
 
 
-4. Run the Project
+### 4. Run the Project
 
 Run:
 mvn javafx:run
@@ -93,14 +93,23 @@ Launcher.java
 📂 Project Structure
 Library-Management-System/
 │
+
 ├── src/
+
 │   ├── main/
+
 │   │   ├── java/          # Java source code
+
 │   │   └── resources/     # FXML, CSS, images
+
 │
-├── database/              # SQLite database file  
+
+├── database/              # SQLite database file 
+
 ├── pom.xml
+
 ├── mvnw
+
 └── README.md
 
 
