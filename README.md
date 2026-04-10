@@ -124,11 +124,17 @@ Library-Management-System/
 ## Main Dashboard
 ![This is dashboard page](https://github.com/Manik028/Library-Management-System/blob/main/Screenshot%20(237).png?raw=true)
 
+## Admin can Issue Book for Users
+![This support page](https://github.com/Manik028/Library-Management-System/blob/main/Screenshot%20(240).png?raw=true)
+
 ## Book & active User statistics
 ![This is statistics page](https://github.com/Manik028/Library-Management-System/blob/main/Screenshot%20(238).png?raw=true)
 
 ## Support panel
 ![This support page](https://github.com/Manik028/Library-Management-System/blob/main/Screenshot%20(239).png?raw=true)
+
+## A Library Card Generated according to the informations while signing up
+![This support page](https://github.com/Manik028/Library-Management-System/blob/main/Screenshot%20(242).png?raw=true)
 
 
 
