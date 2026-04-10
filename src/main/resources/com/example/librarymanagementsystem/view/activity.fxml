@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #000000; -fx-padding: 30;"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.librarymanagementsystem.controller.ActivityController">
+
+    <Label text="My Activity Progress" style="-fx-text-fill: #00dbde; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="lblMotivation" text="Loading..."
+           style="-fx-text-fill: #38ef7d; -fx-font-size: 20px; -fx-font-style: italic; -fx-padding: 10;"/>
+
+    <HBox spacing="40" alignment="CENTER">
+        <VBox alignment="CENTER" style="-fx-background-color: #1a2a6c; -fx-padding: 15; -fx-background-radius: 10;">
+            <Label text="BOOKS READ" style="-fx-text-fill: white;"/>
+            <Label fx:id="lblReadCount" text="0" style="-fx-text-fill: #38ef7d; -fx-font-size: 30px; -fx-font-weight: bold;"/>
+        </VBox>
+        <VBox alignment="CENTER" style="-fx-background-color: #1a2a6c; -fx-padding: 15; -fx-background-radius: 10;">
+            <Label text="ACTIVE DAYS" style="-fx-text-fill: white;"/>
+            <Label fx:id="lblActiveDays" text="0" style="-fx-text-fill: #f8b500; -fx-font-size: 30px; -fx-font-weight: bold;"/>
+        </VBox>
+    </HBox>
+
+    <AreaChart fx:id="progressChart" prefHeight="250" style="-fx-legend-visible: false;">
+        <xAxis><CategoryAxis label="Timeline" tickLabelFill="WHITE"/></xAxis>
+        <yAxis><NumberAxis label="Activity Level" tickLabelFill="WHITE"/></yAxis>
+    </AreaChart>
+
+    <Button text="← Back" onAction="#backToDashboard" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 10 30;"/>
+</VBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.librarymanagementsystem.controller.IssueController"
+      style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom, #1E3C72, #2A5298);">
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="← Back" onAction="#backToDashboard" style="-fx-background-color: #ffffff; -fx-text-fill: #2A5298;"/>
+        <Label text="Issue Book" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+    </HBox>
+
+    <GridPane hgap="10" vgap="15">
+        <Label text="Select Book:" style="-fx-text-fill: white;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="bookCombo" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Select Member:" style="-fx-text-fill: white;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="memberCombo" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Issue Date:" style="-fx-text-fill: white;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="issueDate" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Return Date:" style="-fx-text-fill: white;" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="returnDate" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Button text="Issue Book" onAction="#issueBook" style="-fx-background-color: #ffffff; -fx-text-fill: #2A5298;"/>
+</VBox>

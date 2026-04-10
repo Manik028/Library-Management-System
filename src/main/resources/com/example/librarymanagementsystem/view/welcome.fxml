@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.librarymanagementsystem.controller.WelcomeController"
+           stylesheets="@/com/example/librarymanagementsystem/style/style.css">
+
+    <!-- Background -->
+    <StackPane style="-fx-background-color: linear-gradient(to bottom right, #0A2463, #1e3c72, #2a5298);">
+
+        <!-- Center Card -->
+        <VBox alignment="CENTER" spacing="20"
+              style="
+                -fx-background-color: rgba(255,255,255,0.08);
+                -fx-padding: 40;
+                -fx-background-radius: 25;
+                -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 25, 0, 0, 10);
+              ">
+
+            <padding>
+                <Insets top="20" right="40" bottom="20" left="40"/>
+            </padding>
+
+            <!-- Logo -->
+            <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
+                <Image url="@../images/book.png"/>
+            </ImageView>
+
+            <!-- Title -->
+            <Label text="Library Management System" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="28"/>
+                </font>
+            </Label>
+
+            <!-- Subtitle -->
+            <Label text="Manage Books • Track Users • Smart Library"
+                   style="-fx-text-fill: #d0d8e8; -fx-font-size: 13px;" />
+
+            <Region prefHeight="15"/>
+
+            <!-- Buttons -->
+            <Button text="Login as User"
+                    onAction="#goToLibrarianLogin"
+                    styleClass="main-btn"/>
+
+            <Button text="Login as Admin"
+                    onAction="#goToAdminLogin"
+                    styleClass="outline-btn"/>
+
+            <Button text="Credits"
+                    onAction="#showCreditsPage"
+                    styleClass="gradient-btn"/>
+
+        </VBox>
+    </StackPane>
+
+</StackPane>

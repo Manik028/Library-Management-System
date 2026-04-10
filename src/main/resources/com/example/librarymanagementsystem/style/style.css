@@ -1,0 +1,369 @@
+/* =========================
+   General App Styling - "The Aurora Cyber Theme"
+   ========================= */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-background-color: #000000;
+}
+
+/* =========================
+   Sidebar
+   ========================= */
+#sidebar {
+    /* Wild magenta to neon cyan gradient */
+    -fx-background-color: linear-gradient(to bottom, #fc00ff, #00dbde);
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0, 5, 0);
+}
+
+#sidebar Button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 20 12 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+}
+
+#sidebar Button:hover {
+    /* Glowing golden-yellow hover effect to contrast the pink */
+    -fx-background-color: linear-gradient(to right, #fceabb, #f8b500);
+    -fx-text-fill: #302b63;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(248,181,0,0.8), 15, 0, 0, 0);
+}
+
+/* =========================
+   Dashboard Cards
+   ========================= */
+/* --- Fix for Square Card Hover --- */
+.card {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.card:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Gradients for each specific card */
+.card-books { -fx-background-color: linear-gradient(to bottom right, #00f2fe, #4facfe); -fx-effect: dropshadow(gaussian, rgba(79,172,254,0.6), 20, 0, 0, 5); }
+.card-members { -fx-background-color: linear-gradient(to bottom right, #43e97b, #38f9d7); -fx-effect: dropshadow(gaussian, rgba(67,233,123,0.6), 20, 0, 0, 5); }
+.card-issue { -fx-background-color: linear-gradient(to bottom right, #f6d365, #fda085); -fx-effect: dropshadow(gaussian, rgba(253,160,133,0.6), 20, 0, 0, 5); }
+.card-return { -fx-background-color: linear-gradient(to bottom right, #ff9068, #ff4b1f); -fx-effect: dropshadow(gaussian, rgba(255,75,31,0.6), 20, 0, 0, 5); }
+.card-practice { -fx-background-color: linear-gradient(to bottom right, #c471ed, #f64f59); -fx-effect: dropshadow(gaussian, rgba(246,79,89,0.6), 20, 0, 0, 5); }
+.card-library { -fx-background-color: linear-gradient(to bottom right, #89f7fe, #66a6ff); -fx-effect: dropshadow(gaussian, rgba(102,166,255,0.6), 20, 0, 0, 5); }
+.card-chat { -fx-background-color: linear-gradient(to bottom right, #0ba360, #3cba92); -fx-effect: dropshadow(gaussian, rgba(60,186,146,0.6), 20, 0, 0, 5); }
+
+/* =========================
+   Tables (Global Fixes Applied Here)
+   ========================= */
+.table-view {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #00dbde;
+    -fx-border-width: 3;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,219,222,0.4), 15, 0, 0, 5);
+}
+
+.table-view .column-header-background {
+    /* Default fiery orange/red gradient for the table header */
+    -fx-background-color: linear-gradient(to right, #f12711, #f5af19);
+    -fx-background-radius: 10 10 0 0;
+}
+
+/* FIX: Forces the actual header cells to be transparent so the gradient shows */
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 0 1px 0 0; /* subtle separator between columns */
+}
+
+/* FIX: Stops the empty gap at the end of the table from being silver */
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+/* FIX: Text styling for headers with reduced padding to prevent cutoff */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-padding: 2px 5px; /* Reduced padding gives more room for text like 'Members' */
+    -fx-alignment: center-left;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+.table-row-cell:hover {
+    /* Light neon blue when hovering over a row */
+    -fx-background-color: #ccffff;
+    -fx-text-fill: black;
+}
+
+/* =========================
+   Buttons (Standard)
+   ========================= */
+.button {
+    /* Electric blue pill-shaped buttons */
+    -fx-background-color: linear-gradient(to right, #4facfe, #00f2fe);
+    -fx-text-fill: #1a2a6c;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 25 10 25;
+    -fx-background-radius: 30; /* Pill shape */
+    -fx-effect: dropshadow(gaussian, rgba(79,172,254,0.6), 10, 0, 0, 3);
+}
+
+.button:hover {
+    /* Inverts to intense Purple/Pink on hover */
+    -fx-background-color: linear-gradient(to right, #b224ef, #7579ff);
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(178,36,239,0.8), 15, 0, 0, 4);
+}
+
+/* =========================
+   Back / Logout Buttons
+   ========================= */
+.button-back, #btnLogout {
+    /* Intense Crimson */
+    -fx-background-color: linear-gradient(to right, #cb2d3e, #ef473a);
+    -fx-text-fill: white;
+    -fx-background-radius: 30;
+}
+
+.button-back:hover, #btnLogout:hover {
+    /* Hot Lava */
+    -fx-background-color: linear-gradient(to right, #ff4b1f, #ff9068);
+    -fx-effect: dropshadow(gaussian, rgba(255,75,31,0.8), 15, 0, 0, 4);
+}
+
+/* =========================
+   Labels (Text)
+   ========================= */
+.label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* =========================
+   TextFields & ComboBoxes
+   ========================= */
+.text-field, .combo-box {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    /* Multicolored glowing border */
+    -fx-border-color: linear-gradient(to right, #fc00ff, #00dbde);
+    -fx-border-width: 2;
+    -fx-padding: 8 15 8 15;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.text-field:focused, .combo-box:focused {
+    /* Glows gold when you type in it */
+    -fx-border-color: #f8b500;
+    -fx-effect: dropshadow(gaussian, rgba(248,181,0,0.8), 12, 0, 0, 0);
+}
+
+/* =========================
+   Dashboard main content area
+   ========================= */
+#mainContent {
+    -fx-padding: 30;
+    /* Smooth translucent glass overlay inside the dark galaxy */
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 20;
+}
+
+/* =========================
+   1. BOOKS TABLE (Cyber Blue Theme)
+   ========================= */
+.table-books {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #00f2fe; /* Neon blue border */
+    -fx-border-width: 3;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 242, 254, 0.5), 15, 0, 0, 5);
+}
+.table-books .column-header-background {
+    -fx-background-color: linear-gradient(to right, #0A2463, #4facfe);
+    -fx-background-radius: 10 10 0 0;
+}
+.table-books .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+.table-books .table-row-cell {
+    -fx-background-color: white;
+}
+.table-books .table-row-cell:odd {
+    -fx-background-color: #e6f7ff; /* Very light blue for alternating rows */
+}
+.table-books .table-row-cell:hover {
+    -fx-background-color: #99ddff; /* Brighter blue on hover */
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+/* =========================
+   2. MEMBERS TABLE (Emerald Green Theme)
+   ========================= */
+.table-members {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #38ef7d; /* Neon green border */
+    -fx-border-width: 3;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, rgba(56, 239, 125, 0.5), 15, 0, 0, 5);
+}
+.table-members .column-header-background {
+    -fx-background-color: linear-gradient(to right, #11998e, #38ef7d);
+    -fx-background-radius: 10 10 0 0;
+}
+.table-members .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+.table-members .table-row-cell {
+    -fx-background-color: white;
+}
+.table-members .table-row-cell:odd {
+    -fx-background-color: #f0fdf4; /* Very light green */
+}
+.table-members .table-row-cell:hover {
+    -fx-background-color: #bbf7d0; /* Brighter green on hover */
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+/* =========================
+   3. RETURN BOOK TABLE (Sunset Orange Theme)
+   ========================= */
+.table-return {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #ff9068; /* Neon orange border */
+    -fx-border-width: 3;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, rgba(255, 144, 104, 0.5), 15, 0, 0, 5);
+}
+.table-return .column-header-background {
+    -fx-background-color: linear-gradient(to right, #cb2d3e, #ef473a);
+    -fx-background-radius: 10 10 0 0;
+}
+.table-return .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+.table-return .table-row-cell {
+    -fx-background-color: white;
+}
+.table-return .table-row-cell:odd {
+    -fx-background-color: #fff5f5; /* Very light red/orange */
+}
+.table-return .table-row-cell:hover {
+    -fx-background-color: #fed7d7; /* Brighter peach/red on hover */
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+/* =========================
+   Circular Floating Buttons for Top Corners
+   ========================= */
+.circle-btn {
+    -fx-min-width: 80px;
+    -fx-min-height: 80px;
+    -fx-max-width: 80px;
+    -fx-max-height: 80px;
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+
+    /* THE FIX FOR THE "..." TEXT CUTOFF */
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+/* Gold Glow for Profile */
+.btn-profile-circle {
+    -fx-background-color: linear-gradient(to bottom right, #fceabb, #f8b500);
+    -fx-effect: dropshadow(gaussian, rgba(248, 181, 0, 0.6), 15, 0, 0, 0);
+}
+
+/* Neon Glow for Activity */
+.btn-activity-circle {
+    -fx-background-color: linear-gradient(to bottom right, #fc00ff, #00dbde);
+    -fx-effect: dropshadow(gaussian, rgba(0, 219, 222, 0.6), 15, 0, 0, 0);
+}
+
+.circle-btn:hover {
+    -fx-scale-x: 1.15;
+    -fx-scale-y: 1.15;
+    -fx-effect: dropshadow(gaussian, white, 15, 0, 0, 0);
+}
+/* =========================================
+   PRACTICE QUIZ STYLING
+   ========================================= */
+
+/* The Main Question Text */
+.quiz-question-text {
+    -fx-text-fill: #00dbde; /* Vibrant Neon Cyan */
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 219, 222, 0.6), 15, 0, 0, 0);
+}
+
+/* The Answer Option Boxes */
+.quiz-option {
+    -fx-background-color: rgba(255, 255, 255, 0.05); /* Slight glass effect */
+    -fx-border-color: linear-gradient(to right, #fc00ff, #00dbde); /* Magenta to Cyan border */
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 15 25;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+/* When you hover over an answer */
+.quiz-option:hover {
+    -fx-background-color: linear-gradient(to right, #b224ef, #7579ff);
+    -fx-border-color: #ffffff;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(178, 36, 239, 0.8), 20, 0, 0, 0);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}

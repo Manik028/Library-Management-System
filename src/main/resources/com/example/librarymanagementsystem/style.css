@@ -1,0 +1,215 @@
+/* =========================
+   General App Styling - "The Aurora Cyber Theme"
+   ========================= */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    /* A deep, rich, multi-color galaxy background so the bright colors pop */
+    -fx-background-color: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+}
+
+/* =========================
+   Sidebar
+   ========================= */
+#sidebar {
+    /* Wild magenta to neon cyan gradient */
+    -fx-background-color: linear-gradient(to bottom, #fc00ff, #00dbde);
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0, 5, 0);
+}
+
+#sidebar Button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 20 12 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+}
+
+#sidebar Button:hover {
+    /* Glowing golden-yellow hover effect to contrast the pink */
+    -fx-background-color: linear-gradient(to right, #fceabb, #f8b500);
+    -fx-text-fill: #302b63;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(248,181,0,0.8), 15, 0, 0, 0);
+}
+
+/* =========================
+   Dashboard Cards
+   ========================= */
+.card {
+    /* Emerald to Lime green gradient */
+    -fx-background-color: linear-gradient(to bottom right, #11998e, #38ef7d);
+    -fx-background-radius: 20;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 5, 5);
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.card:hover {
+    /* Completely shifts to a hot pink/orange fire gradient on hover */
+    -fx-background-color: linear-gradient(to bottom right, #ff0844, #ffb199);
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(255,8,68,0.7), 20, 0, 0, 0);
+}
+
+/* =========================
+   Tables
+   ========================= */
+.table-view {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #00dbde;
+    -fx-border-width: 3;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,219,222,0.4), 15, 0, 0, 5);
+}
+
+.table-view .column-header-background {
+    /* Fiery orange/red gradient for the table header */
+    -fx-background-color: linear-gradient(to right, #f12711, #f5af19);
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header,
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-padding: 5;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+.table-row-cell:hover {
+    /* Light neon blue when hovering over a row */
+    -fx-background-color: #ccffff;
+    -fx-text-fill: black;
+}
+
+/* =========================
+   Buttons (Standard)
+   ========================= */
+.button {
+    /* Electric blue pill-shaped buttons */
+    -fx-background-color: linear-gradient(to right, #4facfe, #00f2fe);
+    -fx-text-fill: #1a2a6c;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 25 10 25;
+    -fx-background-radius: 30; /* Pill shape */
+    -fx-effect: dropshadow(gaussian, rgba(79,172,254,0.6), 10, 0, 0, 3);
+}
+
+.button:hover {
+    /* Inverts to intense Purple/Pink on hover */
+    -fx-background-color: linear-gradient(to right, #b224ef, #7579ff);
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(178,36,239,0.8), 15, 0, 0, 4);
+}
+
+/* =========================
+   Back / Logout Buttons
+   ========================= */
+.button-back, #btnLogout {
+    /* Intense Crimson */
+    -fx-background-color: linear-gradient(to right, #cb2d3e, #ef473a);
+    -fx-text-fill: white;
+    -fx-background-radius: 30;
+}
+
+.button-back:hover, #btnLogout:hover {
+    /* Hot Lava */
+    -fx-background-color: linear-gradient(to right, #ff4b1f, #ff9068);
+    -fx-effect: dropshadow(gaussian, rgba(255,75,31,0.8), 15, 0, 0, 4);
+}
+
+/* =========================
+   Labels (Text)
+   ========================= */
+.label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* =========================
+   TextFields & ComboBoxes
+   ========================= */
+.text-field, .combo-box {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    /* Multicolored glowing border */
+    -fx-border-color: linear-gradient(to right, #fc00ff, #00dbde);
+    -fx-border-width: 2;
+    -fx-padding: 8 15 8 15;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.text-field:focused, .combo-box:focused {
+    /* Glows gold when you type in it */
+    -fx-border-color: #f8b500;
+    -fx-effect: dropshadow(gaussian, rgba(248,181,0,0.8), 12, 0, 0, 0);
+}
+
+/* =========================
+   Dashboard main content area
+   ========================= */
+#mainContent {
+    -fx-padding: 30;
+    /* Smooth translucent glass overlay inside the dark galaxy */
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 20;
+}
+
+
+
+
+.main-btn {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #0f2027;
+    -fx-font-size: 14px;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 45px;
+    -fx-background-radius: 25;
+}
+
+.main-btn:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.outline-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 45px;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}
+
+.outline-btn:hover {
+    -fx-background-color: rgba(255,255,255,0.1);
+}
+
+.gradient-btn {
+    -fx-background-color: linear-gradient(to right, #36d1dc, #5b86e5);
+    -fx-text-fill: white;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 45px;
+    -fx-background-radius: 25;
+}
+
+.gradient-btn:hover {
+    -fx-opacity: 0.85;
+}

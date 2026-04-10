@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.librarymanagementsystem.controller.MemberController"
+      stylesheets="@/com/example/librarymanagementsystem/style/style.css"
+      style="-fx-padding: 20; -fx-background-color: transparent;">
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="← Back" onAction="#backToDashboard" styleClass="button-back"/>
+        <Label text="Manage Members" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchField" promptText="Search Members" onKeyReleased="#searchMembers" styleClass="text-field"/>
+    </HBox>
+
+    <TableView fx:id="memberTable" prefHeight="400" VBox.vgrow="ALWAYS" styleClass="table-members">
+        <columns>
+            <TableColumn fx:id="colId" text="Member ID" prefWidth="80"/>
+            <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="colContact" text="Contact Info" prefWidth="150"/>
+            <TableColumn fx:id="colIssuedBook" text="Issued Book" prefWidth="200"/>
+            <TableColumn fx:id="colIssueDate" text="Issue Date" prefWidth="100"/>
+            <TableColumn fx:id="colReturnDate" text="Return Date" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Add Member" onAction="#addMember" styleClass="button"/>
+        <Button text="Remove Member" onAction="#removeMember" styleClass="button"/>
+    </HBox>
+</VBox>

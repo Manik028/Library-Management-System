@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="40" style="-fx-background-color: #000000; -fx-padding: 40;" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.librarymanagementsystem.controller.QuizSubjectsController">
+
+    <Label text="Select a Subject" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+
+    <FlowPane maxWidth="850" hgap="35" vgap="35" alignment="CENTER">
+
+        <Button onAction="#handleSubjectClick" text="PHYSICS" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-books">
+            <graphic><Label text="⚛️" style="-fx-font-size: 60px;"/></graphic>
+        </Button>
+
+        <Button onAction="#handleSubjectClick" text="CHEMISTRY" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-members">
+            <graphic><Label text="🧪" style="-fx-font-size: 60px;"/></graphic>
+        </Button>
+
+        <Button onAction="#handleSubjectClick" text="MATH" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-issue">
+            <graphic><Label text="📐" style="-fx-font-size: 60px;"/></graphic>
+        </Button>
+
+        <Button onAction="#handleSubjectClick" text="HISTORY" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-return">
+            <graphic><Label text="📜" style="-fx-font-size: 60px;"/></graphic>
+        </Button>
+
+        <Button onAction="#handleSubjectClick" text="BIOLOGY" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-practice">
+            <graphic><Label text="🧬" style="-fx-font-size: 60px;"/></graphic>
+        </Button>
+
+        <Button onAction="#handleSubjectClick" text="IRONY" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-library">
+            <graphic><Label text="🎭" style="-fx-font-size: 60px;"/></graphic>
+        </Button>
+
+    </FlowPane>
+</VBox>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<StackPane style="-fx-background-color: #000000;" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.librarymanagementsystem.controller.CreditsController">
+
+    <VBox alignment="CENTER" spacing="40" maxWidth="900" maxHeight="500"
+          style="-fx-background-color: rgba(255, 255, 255, 0.05); -fx-background-radius: 25; -fx-border-color: linear-gradient(to bottom right, #fc00ff, #00dbde); -fx-border-width: 3; -fx-border-radius: 25; -fx-padding: 40; -fx-effect: dropshadow(gaussian, rgba(0, 219, 222, 0.4), 25, 0, 0, 0);">
+
+        <Label text="Developers &amp; Credits" style="-fx-text-fill: #f8b500; -fx-font-size: 36px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(248,181,0,0.5), 10, 0, 0, 0);"/>
+
+        <HBox alignment="CENTER" spacing="80">
+            <VBox alignment="CENTER" spacing="10">
+                <StackPane maxWidth="130" maxHeight="130" style="-fx-border-color: #00dbde; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;">
+                    <ImageView fx:id="imgSajeb" fitWidth="120" fitHeight="120" preserveRatio="false"/>
+                </StackPane>
+                <Label text="Sajeb Ahmed Ruhit" style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+                <Label text="ID: 2405002" style="-fx-text-fill: #00dbde; -fx-font-size: 16px;"/>
+                <Label text="Backend Developer" style="-fx-text-fill: #f8b500; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <Label text="Core Logic &amp; Database Design" style="-fx-text-fill: #aaaaaa; -fx-font-size: 14px;"/>
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="10">
+                <StackPane maxWidth="130" maxHeight="130" style="-fx-border-color: #fc00ff; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;">
+                    <ImageView fx:id="imgManik" fitWidth="120" fitHeight="120" preserveRatio="false"/>
+                </StackPane>
+                <Label text="Manik Sarker" style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+                <Label text="ID: 2405028" style="-fx-text-fill: #fc00ff; -fx-font-size: 16px;"/>
+                <Label text="Frontend Developer" style="-fx-text-fill: #f8b500; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <Label text="UI/UX &amp; Visual Architecture" style="-fx-text-fill: #aaaaaa; -fx-font-size: 14px;"/>
+            </VBox>
+        </HBox>
+
+        <Button text="← Back to Welcome" onAction="#goBack" styleClass="button-back" prefWidth="250" prefHeight="45" style="-fx-font-size: 16px;"/>
+    </VBox>
+</StackPane>

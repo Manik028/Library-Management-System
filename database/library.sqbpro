@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="library.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="176"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title=".Browsables" custom_title="0" dock_id="1" table="0,10:Browsables"/><dock_state state="000000ff00000000fd00000001000000020000000000000000fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000011300ffffff000000000000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">-- =========================
+-- Database: library.db
+-- =========================
+
+-- Table: books
+CREATE TABLE IF NOT EXISTS books (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    author TEXT NOT NULL,
+    quantity INTEGER NOT NULL
+);
+
+-- Sample books
+INSERT INTO books (title, author, quantity) VALUES
+('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 10),
+('The Hobbit', 'J.R.R. Tolkien', 5),
+('1984', 'George Orwell', 7),
+('The Alchemist', 'Paulo Coelho', 8),
+('To Kill a Mockingbird', 'Harper Lee', 6);
+
+-- Table: members
+CREATE TABLE IF NOT EXISTS members (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    contact TEXT
+);
+
+-- Sample members
+INSERT INTO members (name, contact) VALUES
+('Alice Johnson', 'alice@gmail.com'),
+('Bob Smith', 'bob@gmail.com'),
+('Charlie Brown', 'charlie@gmail.com');
+
+-- Table: issues
+CREATE TABLE IF NOT EXISTS issues (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    book_id INTEGER NOT NULL,
+    member_id INTEGER NOT NULL,
+    issue_date TEXT NOT NULL,
+    return_date TEXT,
+    FOREIGN KEY (book_id) REFERENCES books(id),
+    FOREIGN KEY (member_id) REFERENCES members(id)
+);
+
+-- Sample issued books
+INSERT INTO issues (book_id, member_id, issue_date, return_date) VALUES
+(1, 1, '2026-03-20', '2026-03-27'),
+(2, 2, '2026-03-22', NULL),
+(3, 3, '2026-03-25', NULL);</sql><current_tab id="0"/></tab_sql></sqlb_project>

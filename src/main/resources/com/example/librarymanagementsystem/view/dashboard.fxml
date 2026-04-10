@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.librarymanagementsystem.controller.DashboardController"
+            style="-fx-background-color: #000000;"
+            stylesheets="@/com/example/librarymanagementsystem/style/style.css">
+
+    <left>
+        <VBox spacing="15" alignment="TOP_CENTER" style="-fx-background-color: #0A2463;" prefWidth="220">
+            <padding>
+                <Insets top="30" right="20" bottom="30" left="20"/>
+            </padding>
+
+            <Label text="Library Menu" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Region prefHeight="20"/>
+
+            <Button text="Dashboard" onAction="#showDashboardCards" maxWidth="Infinity" style="-fx-background-color: #ffffff; -fx-text-fill: #0A2463; -fx-font-weight: bold; -fx-padding: 10;"/>
+            <Button text="Books" onAction="#showBooksPage" maxWidth="Infinity" style="-fx-background-color: #ffffff; -fx-text-fill: #0A2463; -fx-font-weight: bold; -fx-padding: 10;"/>
+            <Button text="Members" onAction="#showMembersPage" maxWidth="Infinity" style="-fx-background-color: #ffffff; -fx-text-fill: #0A2463; -fx-font-weight: bold; -fx-padding: 10;"/>
+
+            <Button fx:id="btnIssueBook" text="Issue Book" onAction="#showIssuePage" maxWidth="Infinity" style="-fx-background-color: #ffffff; -fx-text-fill: #0A2463; -fx-font-weight: bold; -fx-padding: 10;"/>
+            <Button text="Return Book" onAction="#showReturnPage" maxWidth="Infinity" style="-fx-background-color: #ffffff; -fx-text-fill: #0A2463; -fx-font-weight: bold; -fx-padding: 10;"/>
+            <Button fx:id="btnQuiz" text="Quiz Portal" onAction="#showQuizPage" maxWidth="Infinity" style="-fx-background-color: #ffffff; -fx-text-fill: #0A2463; -fx-font-weight: bold; -fx-padding: 10;"/>
+            <Button fx:id="btnLibraryCard" text="My Library Card" onAction="#showLibraryCard" maxWidth="Infinity" style="-fx-background-color: #ffffff; -fx-text-fill: #0A2463; -fx-font-weight: bold; -fx-padding: 10;"/>
+
+            <Button fx:id="btnReports" text="Reports" onAction="#showReportsPage" maxWidth="Infinity" style="-fx-background-color: #ffffff; -fx-text-fill: #0A2463; -fx-font-weight: bold; -fx-padding: 10;"/>
+            <Button fx:id="btnChat" text="Chat" onAction="#showChatPage" maxWidth="Infinity" style="-fx-background-color: #ffffff; -fx-text-fill: #0A2463; -fx-font-weight: bold; -fx-padding: 10;"/>
+
+            <Region VBox.vgrow="ALWAYS" />
+            <Button text="Logout" onAction="#logout" maxWidth="Infinity" style="-fx-background-color: #ff4c4c; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10;"/>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="mainContent" style="-fx-background-color: transparent;" />
+    </center>
+</BorderPane>

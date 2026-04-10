@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane style="-fx-background-color: transparent;" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.librarymanagementsystem.controller.DashboardController">
+
+    <Button fx:id="btnProfileCircle" text="PRO" onAction="#showProfilePage"
+            styleClass="circle-btn, btn-profile-circle"
+            AnchorPane.topAnchor="25" AnchorPane.leftAnchor="30"/>
+
+    <Button fx:id="btnActivityCircle" text="ACT" onAction="#showActivityPage"
+            styleClass="circle-btn, btn-activity-circle"
+            AnchorPane.topAnchor="25" AnchorPane.rightAnchor="30"/>
+    <VBox alignment="CENTER" AnchorPane.topAnchor="80" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
+        <FlowPane maxWidth="850" hgap="35" vgap="35" alignment="CENTER" style="-fx-padding: 40;">
+
+            <Button onAction="#showBooksPage" text="BOOKS" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-books">
+                <graphic><Label text="📖" style="-fx-font-size: 70px;"/></graphic>
+            </Button>
+
+            <Button onAction="#showMembersPage" text="MEMBERS" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-members">
+                <graphic><Label text="👥" style="-fx-font-size: 70px;"/></graphic>
+            </Button>
+
+            <Button fx:id="cardIssue" onAction="#showIssuePage" text="ISSUE BOOK" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-issue">
+                <graphic><Label text="📤" style="-fx-font-size: 70px;"/></graphic>
+            </Button>
+
+            <Button onAction="#showReturnPage" text="RETURN" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-return">
+                <graphic><Label text="🔙" style="-fx-font-size: 70px;"/></graphic>
+            </Button>
+
+            <Button fx:id="cardQuiz" onAction="#showQuizPage" text="PRACTICE" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-practice">
+                <graphic><Label text="📝" style="-fx-font-size: 70px;"/></graphic>
+            </Button>
+
+            <Button fx:id="cardLibraryCard" onAction="#showLibraryCard" text="MY CARD" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-library">
+                <graphic><Label text="🪪" style="-fx-font-size: 70px;"/></graphic>
+            </Button>
+
+            <Button fx:id="cardChat" onAction="#showChatPage" text="CHAT" contentDisplay="TOP" graphicTextGap="15" prefWidth="220" prefHeight="220" styleClass="card, card-chat">
+                <graphic><Label text="💬" style="-fx-font-size: 70px;"/></graphic>
+            </Button>
+
+        </FlowPane>
+    </VBox>
+</AnchorPane>

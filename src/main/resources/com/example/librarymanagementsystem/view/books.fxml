@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.librarymanagementsystem.controller.BookController"
+      stylesheets="@/com/example/librarymanagementsystem/style/style.css"
+      style="-fx-padding: 20; -fx-background-color: transparent;">
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="← Back" onAction="#backToDashboard" styleClass="button-back"/>
+
+        <Label text="Manage Books" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+
+        <TextField fx:id="searchField" promptText="Search Books" onKeyReleased="#searchBooks" styleClass="text-field"/>
+    </HBox>
+
+    <TableView fx:id="bookTable" prefHeight="400" styleClass="table-books">
+        <columns>
+            <TableColumn fx:id="colId" text="Book ID"/>
+            <TableColumn fx:id="colTitle" text="Title"/>
+            <TableColumn fx:id="colAuthor" text="Author"/>
+            <TableColumn fx:id="colQuantity" text="Quantity"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Add Book" onAction="#addBook" styleClass="button"/>
+        <Button text="Edit Book" onAction="#editBook" styleClass="button"/>
+        <Button text="Delete Book" onAction="#deleteBook" styleClass="button"/>
+    </HBox>
+</VBox>

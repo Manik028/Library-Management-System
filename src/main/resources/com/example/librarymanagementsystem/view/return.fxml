@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.librarymanagementsystem.controller.ReturnController"
+      stylesheets="@/com/example/librarymanagementsystem/style/style.css"
+      style="-fx-padding: 20; -fx-background-color: transparent;">
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="← Back" onAction="#backToDashboard" styleClass="button-back"/>
+        <Label text="Return Book" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+    </HBox>
+
+    <TableView fx:id="issueTable" prefHeight="400" styleClass="table-return">
+        <columns>
+            <TableColumn fx:id="colIssueId" text="Issue ID"/>
+            <TableColumn fx:id="colBookTitle" text="Book Title"/>
+            <TableColumn fx:id="colMemberName" text="Member Name"/>
+            <TableColumn fx:id="colDueDate" text="Due Date"/>
+            <TableColumn fx:id="colFine" text="Fine"/>
+        </columns>
+    </TableView>
+
+    <Button text="Return Book" onAction="#returnBook" styleClass="button"/>
+</VBox>
