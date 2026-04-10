@@ -53,6 +53,14 @@ Built as a desktop application using JavaFX with SQLite for data storage.
 - 🖥️ IntelliJ IDEA / Eclipse / VS Code
 - 🎨 JavaFX SDK configured
 
+## 4. Database Setup
+
+- This project uses **SQLite**, a lightweight embedded database.
+- No separate installation is required.
+- The database file (`.db`) is automatically created or included in the project.
+
+> ✅ Make sure the database file path is correctly configured in your code.
+
 > ✅ No external database setup required (uses SQLite)
 
 ---
