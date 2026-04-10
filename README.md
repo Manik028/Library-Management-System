@@ -73,12 +73,12 @@ Add VM options if needed:
 4. Run the Project
 
 Run:
-
 mvn javafx:run
 
 OR run:
-
 Launcher.java
+
+
 📂 Project Structure
 Library-Management-System/
 │
@@ -93,8 +93,9 @@ Library-Management-System/
 ├── mvnw
 └── README.md
 
-⭐ Support
 
+
+⭐ Support
 If you like this project:
 
 ⭐ Star the repository
